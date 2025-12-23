@@ -1,0 +1,615 @@
+:root {
+  --bg: #f3f7f8;
+  --text: #0a2022;
+  --muted: #456261;
+  --brand: #0fb3b3;
+  --brand-dark: #0a8d8d;
+  --card: #ffffff;
+  --line: rgba(10, 32, 34, 0.14);
+  --shadow: 0 22px 48px rgba(10, 32, 34, 0.12);
+  --radius: 20px;
+  --header-offset: 92px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Tahoma", "Trebuchet MS", "Verdana", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at 15% 0%, rgba(15, 179, 179, 0.08), transparent 45%),
+    radial-gradient(circle at 85% 20%, rgba(10, 141, 141, 0.08), transparent 45%),
+    var(--bg);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a { color: inherit; }
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ====== SPA pages ====== */
+.page { display: none; }
+.page.is-active { display: block; }
+
+/* ====== Header ====== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 255, 255, 0.94);
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 10px 22px rgba(11, 37, 39, 0.08);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 0;
+}
+
+.brand img { height: 52px; }
+
+.main-nav {
+  display: flex;
+  gap: 16px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 999px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.main-nav a:hover {
+  background: rgba(15, 179, 179, 0.16);
+}
+
+.main-nav a.is-active {
+  background: rgba(15, 179, 179, 0.22);
+}
+
+/* ====== Buttons ====== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 1px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn-primary {
+  background: var(--brand);
+  color: #ffffff;
+  box-shadow: 0 12px 22px rgba(15, 179, 179, 0.25);
+}
+
+.btn-primary:hover {
+  background: var(--brand-dark);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  border-color: #ffffff;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* ====== Hero ====== */
+.hero {
+  position: relative;
+  padding: 120px 0 90px;
+  background-image: url("images/consultorio-tecnologia.PNG");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(140deg, rgba(7, 24, 24, 0.88), rgba(10, 80, 80, 0.5));
+}
+
+.hero-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+  align-items: center;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  margin: 12px 0 16px;
+  text-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.lead {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  text-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.hero-card {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 24px;
+  border-radius: var(--radius);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+}
+
+.hero-card ul { padding-left: 18px; }
+
+.note {
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+
+.hero .note { color: rgba(255, 255, 255, 0.7); }
+
+.hero-contact {
+  margin-top: 12px;
+  display: grid;
+  gap: 6px;
+}
+
+/* ====== Sections ====== */
+.section { padding: 80px 0; }
+
+.section-head {
+  max-width: 560px;
+  margin-bottom: 30px;
+}
+
+.section-head.light h2,
+.section-head.light p { color: #ffffff; }
+
+.body-text { margin: 0 0 12px; color: var(--muted); }
+.body-text.light { color: rgba(255, 255, 255, 0.8); }
+
+/* ====== Cards ====== */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 18px;
+  grid-auto-rows: 1fr;
+}
+
+.card {
+  background: var(--card);
+  padding: 18px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 26px rgba(11, 37, 39, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 32px rgba(11, 37, 39, 0.12);
+}
+
+.benefits { background: #ffffff; }
+
+/* ====== Services layout ====== */
+.services {
+  background: linear-gradient(140deg, rgba(15, 179, 179, 0.08), rgba(255, 255, 255, 0));
+}
+
+.services-split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+  align-items: stretch;
+}
+
+/* Media card (imagenes + maps) */
+.media-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: #ffffff;
+  aspect-ratio: 16 / 10;
+}
+
+.media-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ✅ Google Maps dentro de media-card */
+.media-card iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.service-feature {
+  display: grid;
+  background: var(--card);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+}
+
+.service-feature img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.service-feature div { padding: 20px; }
+
+.services-grid .card p { margin-top: 6px; color: var(--muted); }
+
+/* ====== Team / Testimonials / Visit ====== */
+.team { background: #ffffff; }
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  align-items: center;
+}
+
+.testimonials {
+  background: linear-gradient(150deg, rgba(15, 179, 179, 0.08), rgba(255, 255, 255, 0));
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  align-items: center;
+}
+
+.testimonial-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: 0 14px 30px rgba(11, 37, 39, 0.08);
+}
+
+.testimonial-card span {
+  display: inline-flex;
+  margin-top: 12px;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+.visit { background: #ffffff; }
+
+.visit-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  align-items: center;
+}
+
+/* ====== Tips / FAQ ====== */
+.tips { background: #ffffff; }
+
+.faq { background: #f8fbfb; }
+
+.faq details {
+  background: var(--card);
+  padding: 16px 18px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: 0 10px 26px rgba(11, 37, 39, 0.05);
+}
+
+.faq details + details { margin-top: 14px; }
+.faq summary { cursor: pointer; font-weight: 600; }
+
+/* ====== Contact ====== */
+.contact { background: #0b2527; color: #f0fbfb; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+  align-items: center;
+}
+
+.contact-form {
+  background: #ffffff;
+  color: var(--text);
+  padding: 24px;
+  border-radius: var(--radius);
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+  box-shadow: 0 16px 30px rgba(7, 24, 24, 0.18);
+}
+
+.contact-form label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(11, 37, 39, 0.2);
+  font-family: inherit;
+}
+
+.contact-image {
+  background: #f0f4f5;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* póster: NO cortar */
+.contact-image img {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  object-position: center;
+  background: #ffffff;
+  border-radius: 14px;
+}
+
+/* ====== Footer ====== */
+.site-footer {
+  background: #071818;
+  color: #dcecec;
+  padding: 40px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.footer-logo {
+  height: 48px;
+  margin-bottom: 12px;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.socials a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.socials svg {
+  width: 18px;
+  height: 18px;
+  fill: #ffffff;
+}
+
+/* ====== ✅ Header Social Icons (LO NUEVO) ====== */
+.header-socials {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-socials a {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: rgba(10, 32, 34, 0.06);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.header-socials a:hover {
+  background: rgba(15, 179, 179, 0.16);
+  transform: translateY(-1px);
+}
+
+.header-socials svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--text);
+}
+
+/* ====== Floating WhatsApp ====== */
+.whatsapp-float {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  background: #25d366;
+  color: #ffffff;
+  padding: 12px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 12px 26px rgba(37, 211, 102, 0.4);
+}
+
+/* ====== Animations ====== */
+.reveal { animation: fade-up 0.7s ease both; }
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { animation: none !important; transition: none !important; }
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 860px) {
+  .main-nav { display: none; }
+  .header-inner { flex-wrap: wrap; }
+  .hero { padding-top: 100px; }
+
+  /* redes al final en mobile (solo layout, no rompe desktop) */
+  .header-socials { order: 3; }
+}
+
+@media (max-width: 600px) {
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .btn { width: 100%; }
+  .hero { padding: 100px 0 70px; }
+  .hero-card { background: rgba(7, 24, 24, 0.55); }
+}
+/* =========================================================
+   ✅ SOLO AGREGADO: MENÚ MÓVIL (hamburguesa + overlay + drawer)
+   Pegar al FINAL del style.css (no modifica nada existente)
+========================================================= */
+
+/* Botón hamburguesa (solo visible en mobile) */
+.menu-btn {
+  display: none;              /* desktop: oculto */
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  border: 1px solid rgba(11, 37, 39, 0.18);
+  background: #fff;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-btn span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #0a2022;
+}
+
+/* Overlay para cerrar al tocar afuera */
+.nav-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 60;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Drawer del menú móvil */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: -320px;              /* inicia fuera */
+  width: min(320px, 88vw);
+  height: 100vh;
+  background: #ffffff;
+  z-index: 70;
+  box-shadow: -18px 0 40px rgba(11, 37, 39, 0.16);
+  border-left: 1px solid rgba(10, 32, 34, 0.12);
+  padding: 18px;
+  transition: right 0.25s ease;
+}
+
+.mobile-nav a {
+  display: block;
+  padding: 12px 12px;
+  border-radius: 14px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.mobile-nav a:hover {
+  background: rgba(15, 179, 179, 0.14);
+}
+
+/* Estado abierto (controlado por JS: .nav-open en body) */
+body.nav-open .nav-overlay {
+  display: block;
+}
+
+body.nav-open .mobile-nav {
+  display: block;
+  right: 0;
+}
+
+/* Evitar scroll del body cuando está abierto */
+body.no-scroll {
+  overflow: hidden;
+}
+
+/* Responsive: ocultar nav desktop y mostrar botón */
+@media (max-width: 860px) {
+  .menu-btn {
+    display: inline-flex; /* aparece en mobile */
+  }
+
+  /* Asegura que el header no se desordene */
+  .header-inner {
+    align-items: center;
+  }
+}

@@ -1,0 +1,434 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Novadental - Odontología Moderna</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand js-nav" href="#" data-page="inicio" aria-label="Novadental inicio">
+        <img src="images/Logo Web.png" alt="Novadental - Odontología Moderna" />
+      </a>
+
+      <nav class="main-nav" aria-label="Menu principal">
+        <a class="js-nav is-active" href="#" data-page="inicio">Inicio</a>
+        <a class="js-nav" href="#" data-page="servicios">Servicios</a>
+        <a class="js-nav" href="#" data-page="nova-tips">Nova Tips</a>
+        <a class="js-nav" href="#" data-page="preguntas">Preguntas</a>
+        <a class="js-nav" href="#" data-page="contacto">Contacto</a>
+      </nav>
+
+      <!-- ✅ REDES EN HEADER (NUEVO) -->
+      <div class="header-socials" aria-label="Redes sociales">
+        <a href="https://www.instagram.com/novadental.surco/"
+           target="_blank" rel="noopener"
+           aria-label="Instagram Novadental">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M8.5 3h7A5.5 5.5 0 0 1 21 8.5v7A5.5 5.5 0 0 1 15.5 21h-7A5.5 5.5 0 0 1 3 15.5v-7A5.5 5.5 0 0 1 8.5 3zm0 2A3.5 3.5 0 0 0 5 8.5v7A3.5 3.5 0 0 0 8.5 19h7a3.5 3.5 0 0 0 3.5-3.5v-7A3.5 3.5 0 0 0 15.5 5h-7z"/>
+            <path d="M12 7.2a4.8 4.8 0 1 1 0 9.6 4.8 4.8 0 0 1 0-9.6zm0 2a2.8 2.8 0 1 0 0 5.6 2.8 2.8 0 0 0 0-5.6z"/>
+            <circle cx="17.2" cy="6.8" r="1.1"/>
+          </svg>
+        </a>
+
+        <a href="https://www.tiktok.com/@novadental.surco"
+           target="_blank" rel="noopener"
+           aria-label="TikTok Novadental">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M14 3v10.2a3.4 3.4 0 1 1-2-3.1V7.2a6.7 6.7 0 1 0 4.7 6.4V8.1c1.2.9 2.6 1.4 4.3 1.5V6.7c-2.2-.2-4-1.6-4.9-3.7H14z"/>
+          </svg>
+        </a>
+
+        <a href="https://www.facebook.com/novadental.surco/reviews?locale=es_LA"
+           target="_blank" rel="noopener"
+           aria-label="Facebook Novadental">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M13.5 9.2V7.5c0-.8.5-1.4 1.5-1.4h1.6V3.2h-2.2c-2.2 0-3.7 1.5-3.7 3.7v2.3H8.9v2.8h1.8V21h3.1v-9h2.5l.5-2.8h-3.1z"/>
+          </svg>
+        </a>
+      </div>
+
+      <a class="btn btn-primary js-nav" href="#" data-page="contacto">Agendar cita</a>
+
+      <!-- ✅ (AGREGADO) Botón hamburguesa: SOLO para móvil (CSS lo mostrará) -->
+      <button class="menu-btn" type="button"
+        aria-label="Abrir menú"
+        aria-expanded="false"
+        aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- ✅ (AGREGADO) Overlay para cerrar el menú en móvil -->
+    <button class="nav-overlay" type="button" aria-label="Cerrar menú"></button>
+
+    <!-- ✅ (AGREGADO) Menú móvil: mismos links que desktop -->
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Menu principal">
+      <a class="js-nav is-active" href="#" data-page="inicio">Inicio</a>
+      <a class="js-nav" href="#" data-page="servicios">Servicios</a>
+      <a class="js-nav" href="#" data-page="nova-tips">Nova Tips</a>
+      <a class="js-nav" href="#" data-page="preguntas">Preguntas</a>
+      <a class="js-nav" href="#" data-page="contacto">Contacto</a>
+      <a class="btn btn-primary js-nav" href="#" data-page="contacto">Agendar cita</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== PAGE: INICIO ===================== -->
+    <section id="inicio" class="page is-active">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Clínica dental en Surco</p>
+            <h1>Novadental - Odontología Moderna para sonrisas reales.</h1>
+            <p class="lead">
+              Diagnóstico claro, tratamientos actuales y un equipo que te acompaña con
+              calidez y profesionalismo.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary js-nav" href="#" data-page="contacto">Agendar cita</a>
+              <a class="btn btn-outline js-nav" href="#" data-page="servicios">Ver servicios</a>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <h3>Horario de atención</h3>
+            <ul>
+              <li>Lunes a Sábado: 9:00 AM - 8:00 PM</li>
+              <li>Domingo: Cerrado</li>
+            </ul>
+            <p class="note">En feriados el horario puede variar.</p>
+            <div class="hero-contact">
+              <a href="tel:+51930649903">+51 930 649 903</a>
+              <span>WhatsApp disponible</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="benefits">
+        <div class="container">
+          <div class="section-head">
+            <h2>Beneficios pensados para ti</h2>
+            <p>Atención moderna y cercana para que te sientas seguro en cada visita.</p>
+          </div>
+
+          <div class="cards-grid">
+            <article class="card reveal">
+              <h3>Atención profesional</h3>
+              <p>Equipo capacitado con enfoque integral.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Citas rápidas</h3>
+              <p>Agenda simple y confirmación por WhatsApp.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Trato personalizado</h3>
+              <p>Explicamos todo y resolvemos tus dudas.</p>
+            </article>
+            <article class="card reveal">
+              <h3>Ubicación en Surco</h3>
+              <p>Acceso fácil en una zona segura y tranquila.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ===================== PAGE: SERVICIOS ===================== -->
+    <section id="servicios" class="page">
+      <section class="section services">
+        <div class="container">
+          <div class="section-head">
+            <h2>Servicios principales</h2>
+            <p>Soluciones actuales para salud y estética dental.</p>
+          </div>
+
+          <div class="services-split">
+            <div class="media-card">
+              <img src="images/consultorio-ambiente.PNG" alt="Consultorio moderno de Novadental" />
+            </div>
+
+            <article class="service-feature">
+              <img src="images/atencion-paciente.PNG" alt="Atención clínica en Novadental" />
+              <div>
+                <h3>Atención clínica con tecnología y detalle</h3>
+                <p>Espacios modernos y procedimientos reales para cuidar cada etapa de tu tratamiento.</p>
+              </div>
+            </article>
+          </div>
+
+          <div class="cards-grid services-grid">
+            <article class="card">
+              <h3>Endodoncia</h3>
+              <p>Alivio del dolor con tratamiento preciso.</p>
+            </article>
+            <article class="card">
+              <h3>Implantes</h3>
+              <p>Rehabilitación funcional y estética.</p>
+            </article>
+            <article class="card">
+              <h3>Cirugía</h3>
+              <p>Procedimientos seguros y controlados.</p>
+            </article>
+            <article class="card">
+              <h3>Odontopediatría</h3>
+              <p>Cuidado amable para niños.</p>
+            </article>
+            <article class="card">
+              <h3>Rehabilitación</h3>
+              <p>Recupera tu mordida y tu confianza.</p>
+            </article>
+            <article class="card">
+              <h3>Estética dental</h3>
+              <p>Sonrisas armónicas y naturales.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section team">
+        <div class="container team-grid">
+          <div>
+            <div class="section-head">
+              <h2>Nuestro equipo</h2>
+              <p>Profesionales que escuchan y te acompañan durante todo el proceso.</p>
+            </div>
+            <p class="body-text">
+              Trabajamos con una atención cercana y protocolos claros para que te sientas seguro en cada visita.
+            </p>
+          </div>
+          <div class="media-card">
+            <img src="images/equipo-novadental.PNG" alt="Equipo Novadental" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section testimonials">
+        <div class="container testimonials-grid">
+          <div class="media-card">
+            <img src="images/paciente-feliz.PNG" alt="Paciente en Novadental" />
+          </div>
+          <div>
+            <div class="section-head">
+              <h2>Experiencia del paciente</h2>
+              <p>Un espacio que transmite calma y confianza desde el primer contacto.</p>
+            </div>
+            <div class="testimonial-card">
+              <p>"Me sentí escuchado y bien orientado durante todo el proceso. La atención fue clara y cercana."</p>
+              <span>Paciente Novadental</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section visit">
+        <div class="container visit-grid">
+          <div class="media-card">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.1219827472705!2d-76.99491168476616!3d-12.1635476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b9928badd933%3A0xc1a17f9a6de3c3cd!2sNovadental!5e0!3m2!1ses!2spe!4v1702941150478"
+              width="100%"
+              height="360"
+              style="border:0;"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen=""
+              aria-label="Ubicación de Novadental en Google Maps">
+            </iframe>
+          </div>
+          <div>
+            <div class="section-head">
+              <h2>Visítanos</h2>
+              <p>Un espacio moderno y accesible en Santiago de Surco.</p>
+            </div>
+            <p class="body-text">Jr Ariadna MZ d6 lote 13 urb, Lima 15803, Santiago de Surco</p>
+            <p class="body-text">Lunes a Sábado: 9:00 AM - 8:00 PM</p>
+            <p class="body-text">Domingo: Cerrado</p>
+            <p class="note">En feriados el horario puede variar.</p>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ===================== PAGE: NOVA TIPS ===================== -->
+    <section id="nova-tips" class="page">
+      <section class="section tips">
+        <div class="container">
+          <div class="section-head">
+            <h2>Nova Tips</h2>
+            <p>Pequeños hábitos que hacen una gran diferencia.</p>
+          </div>
+
+          <div class="cards-grid">
+            <article class="card">
+              <h3>Hilo dental diario</h3>
+              <p>Ayuda a prevenir caries entre los dientes.</p>
+            </article>
+            <article class="card">
+              <h3>Hidrátate</h3>
+              <p>El agua favorece una boca saludable.</p>
+            </article>
+            <article class="card">
+              <h3>Chequeo semestral</h3>
+              <p>Detecta problemas antes de que avancen.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ===================== PAGE: PREGUNTAS ===================== -->
+    <section id="preguntas" class="page">
+      <section class="section faq">
+        <div class="container">
+          <div class="section-head">
+            <h2>Preguntas frecuentes</h2>
+            <p>Respuestas rápidas para que agendes con confianza.</p>
+          </div>
+
+          <div class="faq-grid">
+            <details>
+              <summary>¿Necesito una evaluación previa?</summary>
+              <p>Sí, recomendamos una evaluación inicial para definir el plan ideal.</p>
+            </details>
+            <details>
+              <summary>¿Puedo agendar por WhatsApp?</summary>
+              <p>Claro, nos escribes y coordinamos según tu disponibilidad.</p>
+            </details>
+            <details>
+              <summary>¿Atienden a niños?</summary>
+              <p>Sí, contamos con odontopediatría y trato especializado.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- ===================== PAGE: CONTACTO ===================== -->
+    <section id="contacto" class="page">
+      <section class="section contact">
+        <div class="container contact-grid">
+          <div>
+            <div class="section-head light">
+              <h2>Agenda tu cita</h2>
+              <p>Estamos en Santiago de Surco, Lima.</p>
+            </div>
+
+            <p class="body-text light">Dirección: Jr Ariadna MZ d6 lote 13 urb, Lima 15803, Santiago de Surco</p>
+            <p class="body-text light">Teléfono / WhatsApp: <a href="tel:+51930649903">+51 930 649 903</a></p>
+            <p class="body-text light">Correo: <a href="mailto:novadental.surco@gmail.com">novadental.surco@gmail.com</a></p>
+
+            <!-- ✅ SOLO CAMBIO: hacer que el submit abra WhatsApp con los datos -->
+            <form id="contact-form" class="contact-form" action="#" method="post">
+              <label>
+                Nombre
+                <input id="cf-nombre" type="text" name="nombre" required />
+              </label>
+
+              <label>
+                Teléfono
+                <input id="cf-telefono" type="tel" name="telefono" required />
+              </label>
+
+              <label>
+                Servicio
+                <select id="cf-servicio" name="servicio" required>
+                  <option value="">Selecciona un servicio</option>
+                  <option>Endodoncia</option>
+                  <option>Implantes</option>
+                  <option>Cirugía</option>
+                  <option>Odontopediatría</option>
+                  <option>Rehabilitación</option>
+                  <option>Estética dental</option>
+                </select>
+              </label>
+
+              <label>
+                Mensaje (opcional)
+                <textarea id="cf-mensaje" name="mensaje" rows="4"></textarea>
+              </label>
+
+              <button type="submit" class="btn btn-primary">Solicitar cita</button>
+              <p class="note">Te contactaremos por WhatsApp para confirmar tu cita.</p>
+            </form>
+          </div>
+
+          <div class="media-card contact-image">
+            <img src="images/agendar-cita.PNG" alt="Agendar cita" />
+          </div>
+        </div>
+      </section>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <img class="footer-logo" src="images/Logo Web.png" alt="Novadental - Odontología Moderna" />
+        <p>Jr Ariadna MZ d6 lote 13 urb, Lima 15803, Santiago de Surco</p>
+      </div>
+
+      <div>
+        <h4>Horario</h4>
+        <p>Lunes a Sábado: 9:00 AM - 8:00 PM</p>
+        <p>Domingo: Cerrado</p>
+        <p class="note">En feriados el horario puede variar.</p>
+      </div>
+
+      <div>
+        <h4>Contacto</h4>
+        <p><a href="tel:+51930649903">+51 930 649 903</a></p>
+        <p><a href="mailto:novadental.surco@gmail.com">novadental.surco@gmail.com</a></p>
+
+        <div class="socials">
+          <!-- redes igual que antes -->
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float"
+    href="https://wa.me/51930649903?text=Hola%2C%20quiero%20agendar%20una%20cita%20en%20Novadental."
+    target="_blank" rel="noopener" aria-label="WhatsApp Novadental">
+    WhatsApp
+  </a>
+
+  <script src="script.js"></script>
+
+  <!-- ✅ SOLO CAMBIO: script para enviar formulario a WhatsApp -->
+  <script>
+    (function () {
+      const form = document.getElementById("contact-form");
+      if (!form) return;
+
+      const WA_NUMBER = "51930649903"; // sin +, sin espacios
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const nombre = (document.getElementById("cf-nombre")?.value || "").trim();
+        const telefono = (document.getElementById("cf-telefono")?.value || "").trim();
+        const servicio = (document.getElementById("cf-servicio")?.value || "").trim();
+        const mensaje = (document.getElementById("cf-mensaje")?.value || "").trim();
+
+        const texto =
+`Hola, quiero agendar una cita en Novadental.
+Nombre: ${nombre}
+Teléfono: ${telefono}
+Servicio: ${servicio}${mensaje ? `\nMensaje: ${mensaje}` : ""}`;
+
+        const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(texto)}`;
+        window.open(url, "_blank", "noopener");
+      });
+    })();
+  </script>
+
+  <!-- ✅ (IMPORTANTE) No agrego más JS aquí para el menú móvil.
+       El JS del menú lo ponemos en script.js para no mezclar. -->
+</body>
+</html>
