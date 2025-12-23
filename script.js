@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
   const pages = Array.from(document.querySelectorAll(".page"));
   const navLinks = Array.from(document.querySelectorAll(".js-nav"));
 
